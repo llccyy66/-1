@@ -1,0 +1,142 @@
+.num-button{
+    position: absolute;
+    top: 1780px;
+    left: 50%;
+    transform: translate(-385%);
+    z-index:10;
+}
+
+
+.bg-image{
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    color: white; /* 根据背景图片调整文本颜色 */
+    z-index: 1; /* 设置较低的 z-index 值 */
+    overflow: hidden;
+    background-size: cover;   /* 背景图自适应容器大小，保持比例 */
+    background-position: center; /* 背景图居中显示 */
+}
+
+
+.breadcrumbs-custom{
+    position: relative;
+    
+
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-custom-title{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+.breadcrumbs-custom-path{
+    color: #aeb1ae;
+    padding-left: 0;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+.breadcrumbs-custom-path li :not(.no-think)::after{
+    content: ">";
+    padding-left: 10px ;}
+
+
+.grid-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr); /* 创建两列 */
+    gap: 50px; /* 调整这里以控制图片和文本块之间的间距 */
+    max-width: 1200px; /* 可选：限制容器的最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+    
+}
+
+.grid-item {
+   
+overflow: hidden; /* 确保溢出的内容被裁剪 */
+
+}
+
+.grid-item img {
+    width: 100%; /* 图片宽度设置为100%，使其适应网格项 */
+    height: auto; /* 保持图片的宽高比 */
+    display: block; /* 防止img作为内联元素时出现底部空隙 */
+   
+}
+
+.title {
+    margin-top: 20px; /* 在标题上方添加一些空间 */
+    font-size: 1.8em;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color :rgb(218, 176, 93)
+}
+
+.col{
+    margin-top: 10px; /* 在标题上方添加一些空间 */
+    color: rgb(121, 115, 115);
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.md  {
+    margin-top: 15px; /* 在段落上方添加一些空间 */
+    color :rgb(184, 184, 189);
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
+
+.grid-item img:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+    transition: transform 0.2s ease-in-out; /* 平滑过渡效果 */
+}
+.button-container {
+   
+  
+        position: absolute;
+        top: 1980px;
+        left: 50%;
+        transform: translate(-175%);
+        z-index:10;
+    
+    
+}
+
+.button {
+    background-color: #a08040;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin:  15px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #806030;
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 在小屏幕上使用单列布局 */
+        gap: 10px; /* 保持或调整间距 */
+    }
+}

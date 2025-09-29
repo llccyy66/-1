@@ -1,0 +1,400 @@
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+.bg-image{
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    color: white; /* 根据背景图片调整文本颜色 */
+    z-index: 1; /* 设置较低的 z-index 值 */
+    overflow: hidden;
+    background-size: cover;   /* 背景图自适应容器大小，保持比例 */
+    background-position: center; /* 背景图居中显示 */
+}
+
+
+.breadcrumbs-custom{
+    position: relative;
+    
+
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-custom-title{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+.breadcrumbs-custom-path{
+    color: #aeb1ae;
+    padding-left: 0;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+.breadcrumbs-custom-path li :not(.no-think)::after{
+    content: ">";
+    padding-left: 20px ;
+}
+.section {
+    padding: 60px 0;
+}
+
+.outer-container {
+    color: rgb(13, 13, 13); /* 根据背景图片调整文本颜色 */
+
+}
+
+.inner-container {
+    position: relative;
+    z-index: 10; /* 设置较高的 z-index 值 */
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* 背景设置为透明 */
+    box-sizing: border-box; /* 确保内边距不会增加盒子的总尺寸 */
+    border-radius: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-size: 32px; /* 增大标题字体大小 */
+}
+
+p {
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: inline-block;
+    max-width: 730px;
+}
+
+/* 计数器最小化样式 */
+.counter-minimal {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10; /* 确保计数器元素也在较高层次 */
+}
+
+.counter-minimal-image {
+    margin-bottom: 10px;
+}
+
+.counter-minimal-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* 可选，根据需要调整 */
+}
+
+.counter-minimal-icon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.counter-minimal-main {
+    margin-bottom: 10px;
+}
+
+.counter {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.counter-minimal-title {
+    font-size: 18px;
+    color: #080808;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.bg-gray-100 {
+    background-color: #F5F6FA;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h3{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 700;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-sm-6,
+.col-lg-4 {
+    flex: 0 0 33.3333%; /* 每个盒子占三分之一宽度 */
+    max-width: 33.3333%;
+    padding: 15px;
+}
+
+.box-creative {
+    background-color: #F5F6FA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box-creative:hover {
+    transform: translateY(-10px);
+}
+
+.box-creative-icon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.box-creative-title a {
+    color: #333;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.box-creative p {
+    color: #74757f;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 动画效果 */
+.wow {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+}
+
+.wow.slideInDown {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+         /*下面是籍烁航写的*/
+         .footer {
+            display: flex;
+            background-color:rgb(108,117,125);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            gap: 130px;
+            width: 100%;
+            margin-bottom: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            
+        
+        }
+        
+        .footer-left{
+            float: left;
+            margin-left: 50px;
+            width: 374.98px;
+            align-items: center;
+        
+        }
+        .footer-left h2{
+            font-family: "Playfair Display", "Times New Roman", Times, serif;;
+            color: #FFFFFF99;
+        }
+        .footer-left p{
+            color: #FFFFFF66;
+        }
+        .wenben{
+            width: 374.98px;
+        }
+        .footer h2{
+            color: #FFFFFF99;
+            font-family: "Playfair Display", "Times New Roman", Times, serif;;
+        
+        }
+        .footer-center a {
+            color: #FFFFFF;
+            text-decoration: none;
+            width: 33.3%;
+        }
+        .footer-center a:hover {
+            color: #9e9e9a;
+        }
+        .footer-right {
+            padding: 20px 60px;
+            align-items: center;
+            
+        }
+        .footer-right a {
+            color: #fcf7f7;
+            text-decoration: none;
+        }
+        .footer-right a:hover {
+            color:#9e9e9a;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 每行四个 */
+            grid-gap: 10px; /* 图片之间的间隔 */
+            max-width: 100%; /* 限制容器宽度 */
+            align-items: center;
+        }
+        
+        .gallery img {
+            width: 100%; /* 图片宽度自适应 */
+            height: auto; /* 保持图片比例 */
+            object-fit: cover; /* 防止图片变形 */
+        }
+        .gallery img:hover {
+            transform: scale(1.1); /* 鼠标悬停时放大图片 */
+        }
+        
+        .footernav{
+            width: 66.6%;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+        
+        
+        .allpage{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(46, 50, 54);
+            margin-bottom: 0px;
+            align-items: center;
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            flex-wrap: wrap; /* 允许子元素换行 */
+            background-color: rgb(108,117,125); /* 背景色 */
+            padding: 20px; /* 内边距 */
+           
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /
+        
+        }
+        .footernav{
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 500px; /* 最大宽度 */
+            text-align: left; 
+            
+        }
+        .allpage a{
+            color: #fcf7f7;
+            text-decoration: none;
+        }
+        .allpage p{
+                word-spacing: 50px; /* 设置单词间距为5像素 */
+            
+            
+            
+        }
+        .allpage a:hover {
+            color: #9b9b96;
+         }
+         .icon{
+            width: 100px; /* Original width */
+            height: 100px; /* Original height */
+            display: inline-block;
+            transform: scale(0.5); /* Scale down to 50% */
+            transform-origin: center center; /* Ensure scaling is from the center */
+            align-items: center;
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 500px; /* 最大宽度 */
+            text-align: left; 
+        }
+        .footer3{
+            background-color: rgb(108,117,125);
+            display: flex; /* 使用 flexbox 布局 */
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            flex-wrap: wrap; /* 允许子元素换行 */
+            background-color: rgb(108,117,125); /* 背景色 */
+            padding: 20px; /* 内边距 */
+        }
+        .footer3-1{
+            margin: 300px auto 0px 0px;
+            align-items: center;
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 300px; /* 最大宽度 */
+            text-align: left; 
+            margin-top: 20px;
+            margin-left: 20%;
+            align-items: center
+        
+        }
+        .footer3-2{
+            margin: 0px auto 0px 0px;
+            align-items: center;
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 300px; /* 最大宽度 */
+            text-align: right; 
+            margin-right: 20%;
+            align-items: center
+        
+        }
+        
+        
+        #scrollToTopBtn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #d80e0e;
+            width: 50px;
+            height: 50px;
+        }
+        
+         
+ 

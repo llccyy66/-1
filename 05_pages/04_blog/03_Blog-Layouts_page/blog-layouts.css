@@ -1,0 +1,913 @@
+/* Header样式 */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #808380;
+}
+
+/* Logo样式 */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* 电话和位置图标部分样式 */
+.phone_num, .location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 调整图标大小 */
+.phone_num svg,
+.location svg {
+    width: 24px; /* 图标宽度 */
+    height: 24px; /* 图标高度 */
+}
+
+/* 电话号码和位置文字样式 */
+.phone_num ul, .location p {
+    margin: 0;
+    font-size: 14px;
+    color: #737373;
+}
+
+/* 电话号码和地址默认样式 */
+.phone_num a,
+.location a {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 移除下划线 */
+    transition: color 0.3s, text-decoration 0.3s; /* 添加颜色过渡动画 */
+}
+
+/* 鼠标悬浮时变色 */
+.phone_num a:hover,
+.location a:hover {
+    color: #C1A25D; /* 设置悬浮时的颜色 */
+    text-decoration: none; /* 添加下划线 */
+}
+
+
+/* Button样式 */
+.book_lesson button {
+    background-color: #000000;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.book_lesson button:hover {
+    background-color: #C1A25D;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around; /* 两端对齐 */
+    align-items: center; /* 垂直居中 */
+    padding: 0px 20px; /* 水平方向内边距 */
+    background-color: #2B2B2B; /* 背景颜色 */
+    color: #ffffff; /* 字体颜色 */
+    height: 60px; /* 设置导航栏高度 */
+    width: 100%; /* 占满宽度 */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    position: relative;
+}
+
+
+.nav ul {
+    display: flex; /* 使用Flex布局 */
+    justify-content: center; /* 水平居中对齐 */
+    gap: 20px; /* 子元素间距 */
+    align-items: center; /* 垂直居中 */
+    list-style: none; /* 移除列表默认样式 */
+    margin: 0 auto; /* 让ul本身居中 */
+    padding: 0;
+    
+}
+
+.nav ul li a {
+    color: white; /* 链接字体颜色 */
+    text-decoration: none; /* 移除下划线 */
+    font-size: 14px; /* 字体大小 */
+    padding: 5px 10px; /* 链接内边距 */
+    border-radius: 3px; /* 圆角 */
+    transition: background-color 0.3s; /* 添加悬停动画 */
+}
+
+.nav ul li a:hover {
+    background-color: #C1A25D; /* 悬停时背景色 */
+}
+/* 默认向下箭头 */
+.arrow {
+    display: inline-block;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out; /* 添加旋转动画 */
+    transform: rotate(90deg); /* 默认朝下 */
+    margin-left: 5px; /* 添加空隙 */
+}
+
+/* 鼠标悬停时箭头向上 */
+li:hover .arrow {
+    transform: rotate(270deg); /* 旋转180度，变为向上箭头 */
+}
+
+/* 下拉菜单初始隐藏 */
+#blog-menu,
+#pages-menu {
+    position: absolute;
+    top: 100%; /* 确保菜单在父元素下方 */
+    visibility: hidden; /* 隐藏菜单 */
+    opacity:0; /* 设置透明度为 0 */
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+    margin-top: -20px;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr; /* 默认单列布局 */
+    gap: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9);
+    transition: opacity 0.2s ease, visibility 0.2s ease; /* 平滑显示效果 */
+}
+
+/* 鼠标悬停显示菜单 */
+#blog:hover #blog-menu,
+#pages:hover #pages-menu {
+    visibility: visible; /* 显示菜单 */
+    opacity: 1; /* 设置透明度为 1 */
+}
+
+/* 鼠标移至菜单内时保持显示 */
+#blog-menu:hover,
+#pages-menu:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* PAGES 菜单调整为两列布局 */
+#pages-menu {
+    grid-template-columns: 1fr 1fr; /* 两列布局 */
+    width: 400px; /* 宽度适配内容 */
+}
+
+/* 下拉菜单项样式 */
+#blog-menu li,
+#pages-menu li {
+    padding: 5px 10px;
+    color: white;
+    font-size: 16px;
+    position: relative; /* 必须设置为relative，以便子元素定位 */
+
+}
+
+#blog-menu li:hover,
+#pages-menu li:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+/* 向右箭头动画 */
+@keyframes slide-right {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#blog-menu li a,
+#pages-menu li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+#blog-menu li:hover::before,
+#pages-menu li:hover::before {
+    content: ">";
+    position: absolute;
+    left: -10px;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* 搜索图标容器 */
+#zoom {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    width: 46px; /* 设置固定宽度 */
+    height: 46px; /* 设置固定高度 */
+    background-color: #444; /* 背景色 */
+    border-radius: 50%; /* 圆形外观 */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    transition: background-color 0.3s; /* 悬停动画 */
+    position: absolute;
+    margin-left: 800px;
+}
+
+/* 搜索图标样式 */
+#zoom svg {
+    width: 24px; /* 设置图标宽度 */
+    height: 24px; /* 设置图标高度 */
+    fill: #fff; /* 图标颜色 */
+}
+
+/* 悬停效果 */
+#zoom:hover {
+    background-color: #C1A25D; /* 鼠标悬停时更改背景色 */
+}
+
+.bg-image{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    color: white; /* 根据背景图片调整文本颜色 */
+    z-index: 1; /* 设置较低的 z-index 值 */
+    overflow: hidden;
+    background-size: cover;   /* 背景图自适应容器大小，保持比例 */
+    background-position: center; /* 背景图居中显示 */
+    margin: 0px;
+    padding: 0%;
+}
+
+.container{
+    background-color: #74757f;
+}
+
+.breadcrumbs-custom{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-custom-title{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+.breadcrumbs-custom-path{
+    color: #aeb1ae;
+    padding-left: 0;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+.breadcrumbs-custom-path  :not(.no-think)::before{
+    content: ">";
+    padding-right: 10px;
+}
+
+.bg-secondary {
+    background-color: #f8f9fa;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box-cta-thin {
+    padding: 30px;
+    background-color: #6c757d; /* 设置背景颜色为灰色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-cta-thin .d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.box-cta-thin h4 {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    margin: 0;
+    margin-right: 20px; /* 调整文字和按钮之间的间距 */
+}
+
+.box-cta-thin .button-outer {
+    margin-top: 0; /* 移除顶部间距 */
+}
+
+.post-classic {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+}
+
+.post-classic:hover {
+    transform: translateY(-10px);
+}
+
+.post-classic-media{
+    display: flex;
+    justify-content: center;
+}
+
+.post-classic-media img {
+    width:85%;
+    padding-left: 20px;
+    height: auto;
+    display: block; /* 确保图片在块级元素中正确显示 */
+}
+
+.post-classic-title a {
+    color: #c5a15b;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.post-classic-meta {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.post-classic-meta li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.post-classic-meta li :not(.no-before)::before{
+    content: ".";
+    color: #e8e9ee;
+    margin-right: 10px;
+}
+
+.post-classic-meta time {
+    color: #333;
+}
+
+.post-classic p {
+    color: #74757f;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c5a15b;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-primary-outline {
+    background-color: transparent;
+    border: 2px solid #0f0a00;
+    color: #090600;
+}
+
+.button:hover {
+    background-color: #c5a15b;
+}
+
+.button-primary-outline:hover {
+    background-color: #c5a15b;
+    color: #000000;
+}
+
+.button-outer{
+    margin-top: 20px;
+}
+
+
+
+/* Flexbox布局 */
+.row.row-50 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 间距 */
+}
+
+/* 增大 "Upcoming Events" 字体 */
+.section.section-lg h3 {
+    font-size: 32px; /* 调整字体大小 */
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: bold; /* 可选：加粗字体 */
+    margin-bottom: 30px; /* 调整与下方内容的间距 */
+}
+
+@media (max-width: 768px) {
+    .row.row-50 {
+        flex-direction: column; /* 响应式布局，小屏幕时垂直堆叠 */
+        align-items: center;
+    }
+}
+/* 基本样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg-secondary {
+    background-color: #f8f9fa;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box-cta-thin {
+    padding: 30px;
+    background-color: #6c757d; /* 设置背景颜色为灰色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-cta-thin .d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.box-cta-thin h4 {
+        font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    margin: 0;
+    margin-right: 20px; /* 调整文字和按钮之间的间距 */
+}
+
+.box-cta-thin .button-outer {
+    margin-top: 0; /* 移除顶部间距 */
+}
+
+.post-modern {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+    margin: 20px;
+}
+
+.post-modern:hover {
+    transform: translateY(-10px);
+}
+
+.post-modern-media{
+    display: flex;
+    justify-content: center;
+}
+
+.post-modern-media img {
+    width: 89%;
+    height: auto;
+    display: block; /* 确保图片在块级元素中正确显示 */
+}
+
+.post-modern-title a {
+    color: #c5a15b;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.post-modern-meta {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.post-modern-meta li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.post-modern-meta li :not(.no-before)::before{
+    content: "|";
+    color: #e8e9ee;
+    margin-right: 10px;
+}
+
+.post-modern-meta time {
+    color: #333;
+}
+
+.post-modern p {
+    color: #74757f;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c5a15b;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-primary-outline {
+    background-color: transparent;
+    border: 2px solid #0f0a00;
+    color: #090600;
+}
+
+.button:hover {
+    background-color: #c5a15b;
+}
+
+.button-primary-outline:hover {
+    background-color: #c5a15b;
+    color: #000000;
+}
+
+.button-outer{
+    margin-top: 20px;
+}
+
+/* Flexbox布局 */
+.row.row-50 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 间距 */
+}
+
+/* 增大 "Upcoming Events" 字体 */
+.section.section-lg h3 {
+    font-size: 32px; /* 调整字体大小 */
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: bold; /* 可选：加粗字体 */
+    margin-bottom: 30px; /* 调整与下方内容的间距 */
+}
+
+@media (max-width: 768px) {
+    .row.row-50 {
+        flex-direction: column; /* 响应式布局，小屏幕时垂直堆叠 */
+        align-items: center;
+    }
+}
+.lasttopic{
+    background-color: #dedee1;
+    text-align: center; 
+    font-size: 30px;
+    margin-bottom: 0; /* 确保底部边距为0 */
+    padding: 0; /* 确保填充为0 */
+    font-family:"Playfair Display", "Times New Roman", Times, serif ;
+}
+
+.event{
+    background-color: #dedee1;
+    margin-top: 0; /* 确保顶部边距为0 */
+    padding: 0; /* 确保填充为0 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+     /* 使容器高度占满视口高度 */
+ 
+
+}
+
+.event-picture {
+    background-image: url(../../../01_assets/images/blog-layouts-5-637x456.jpg); /* 替换为您的图片路径 */
+    background-size: cover; /* 覆盖整个容器 */
+    background-position: center; /* 居中显示 */
+    height: 500px; /* 设置容器高度 */
+    position: relative; /* 为子元素提供定位上下文 */
+    color: rgb(240, 236, 236); /* 文字颜色 */
+    font-size: 20px; /* 文字大小 */
+    text-align: center; /* 文字居中 */
+    line-height: 700px; /* 垂直居中文字 */
+    width: 600px;
+    height: 400px;
+   
+}
+
+
+
+.event-left-one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+     /* 使容器高度占满视口高度 */
+     width: 335px;
+     margin-left: 300px;
+     margin-top: 0px;
+}
+
+.event-left-two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width:470px;
+     /* 使容器高度占满视口高度 */
+     margin-left: 230px;
+     margin-top: 40px;
+}
+
+.event-left-three{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+     /* 使容器高度占满视口高度 */
+     margin-left: 300px;
+     margin-top: 40px;
+}
+.event-left-one-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: #AEB1BE; /* 灰色背景 */
+    color: rgb(245, 245, 245); /* 白色文字 */
+    font-family: Arial, sans-serif; /* 无衬线字体 */
+    padding: 30px;
+    
+}
+
+.event-left-one-number p{
+    font-family:"Playfair Display", "Times New Roman", Times, serif ;
+    font-size:25px;
+    color: rgb(255, 255, 254);
+}
+.event-left-one-test p{
+    font-family:"Playfair Display", "Times New Roman", Times, serif ;
+    font-size:20px;
+}
+.event-left-one-test h4{
+    color: #151515;
+}
+
+
+.event-left-one-number:hover {
+    background-color: #c5a15b; /* 你想要的背景颜色 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+}
+.event-left-one-number .event-left-one-test{
+    transform-origin: center center; /* 变换原点为元素的中心 */
+    flex: 1; /* 弹性布局，占据可用空间 */
+}
+.event-left-one-test {
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+}
+
+.event-left-one-test h4 {
+    transition: color 0.3s ease; /* 平滑过渡效果 */
+}
+
+.event-left-one-test h4:hover {
+    color: #c5a15b; /* 鼠标悬停时变为黄色 */
+    
+}
+
+.button-group .send-message {
+    background-color: #c5a15b; /* 设置背景颜色为黄色 */
+    color: white; /* 设置字体颜色为白色 */
+    border: none; /* 移除边框 */
+    padding: 10px 20px; /* 设置内边距 */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+    border-radius: 20px; 
+
+}
+
+.button-group .send-message:hover {
+    background-color: #816d1c; /* 鼠标悬停时改变背景颜色 */
+    animation: blink 1s step-end infinite;
+    
+}
+
+.col-lg-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-top: 20px;
+}
+
+         /*下面是籍烁航写的*/
+         .footer {
+            display: flex;
+            background-color:rgb(108,117,125);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            gap: 130px;
+            width: 100%;
+            margin-bottom: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            
+        
+        }
+        
+        .footer-left{
+            float: left;
+            margin-left: 50px;
+            width: 374.98px;
+            align-items: center;
+        
+        }
+        .footer-left h2{
+            font-family: "Playfair Display", "Times New Roman", Times, serif;;
+            color: #FFFFFF99;
+        }
+        .footer-left p{
+            color: #FFFFFF66;
+        }
+        .wenben{
+            width: 374.98px;
+        }
+        .footer h2{
+            color: #FFFFFF99;
+            font-family: "Playfair Display", "Times New Roman", Times, serif;;
+        
+        }
+        .footer-center a {
+            color: #FFFFFF;
+            text-decoration: none;
+            width: 33.3%;
+        }
+        .footer-center a:hover {
+            color: #9e9e9a;
+        }
+        .footer-right {
+            padding: 20px 60px;
+            align-items: center;
+            
+        }
+        .footer-right a {
+            color: #fcf7f7;
+            text-decoration: none;
+        }
+        .footer-right a:hover {
+            color:#9e9e9a;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 每行四个 */
+            grid-gap: 10px; /* 图片之间的间隔 */
+            max-width: 100%; /* 限制容器宽度 */
+            align-items: center;
+        }
+        
+        .gallery img {
+            width: 100%; /* 图片宽度自适应 */
+            height: auto; /* 保持图片比例 */
+            object-fit: cover; /* 防止图片变形 */
+        }
+        .gallery img:hover {
+            transform: scale(1.1); /* 鼠标悬停时放大图片 */
+        }
+        
+        .footernav{
+            width: 66.6%;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+        
+        
+        .allpage{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(46, 50, 54);
+            margin-bottom: 0px;
+            align-items: center;
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            flex-wrap: wrap; /* 允许子元素换行 */
+            background-color: rgb(108,117,125); /* 背景色 */
+            padding: 20px; /* 内边距 */
+           
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /
+        
+        }
+        .footernav{
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 500px; /* 最大宽度 */
+            text-align: left; 
+            
+        }
+        .allpage a{
+            color: #fcf7f7;
+            text-decoration: none;
+        }
+        .allpage p{
+                word-spacing: 50px; /* 设置单词间距为5像素 */
+            
+            
+            
+        }
+        .allpage a:hover {
+            color: #9b9b96;
+         }
+         .icon{
+            width: 100px; /* Original width */
+            height: 100px; /* Original height */
+            display: inline-block;
+            transform: scale(0.5); /* Scale down to 50% */
+            transform-origin: center center; /* Ensure scaling is from the center */
+            align-items: center;
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 500px; /* 最大宽度 */
+            text-align: left; 
+        }
+        .footer3{
+            background-color: rgb(108,117,125);
+            display: flex; /* 使用 flexbox 布局 */
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            flex-wrap: wrap; /* 允许子元素换行 */
+            background-color: rgb(108,117,125); /* 背景色 */
+            padding: 20px; /* 内边距 */
+        }
+        .footer3-1{
+            margin: 300px auto 0px 0px;
+            align-items: center;
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 300px; /* 最大宽度 */
+            text-align: left; 
+            margin-top: 20px;
+            margin-left: 20%;
+            align-items: center
+        
+        }
+        .footer3-2{
+            margin: 0px auto 0px 0px;
+            align-items: center;
+            flex: 1; /* 弹性布局，占据可用空间 */
+            max-width: 300px; /* 最大宽度 */
+            text-align: right; 
+            margin-right: 20%;
+            align-items: center
+        
+        }
+        
+        
+        #scrollToTopBtn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #d80e0e;
+            width: 50px;
+            height: 50px;
+        }
+        
+         

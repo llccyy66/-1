@@ -1,0 +1,166 @@
+.footer {
+    display: flex;
+    background-color:rgb(108,117,125);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    gap: 130px;
+    width: 100%;
+    margin-bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.footer-left{
+    float: left;
+    margin-left: 50px;
+    width: 374.98px;
+    align-items: center;
+
+}
+.footer-left h2{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;;
+    color: #FFFFFF99;
+}
+.footer-left p{
+    color: #FFFFFF66;
+}
+.wenben{
+    width: 374.98px;
+}
+.footer h2{
+    color: #FFFFFF99;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;;
+
+}
+.footer-center a {
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 33.3%;
+}
+.footer-center a:hover {
+    color: #9e9e9a;
+}
+.footer-right {
+    padding: 20px 60px;
+    align-items: center;
+    
+}
+.footer-right a {
+    color: #fcf7f7;
+    text-decoration: none;
+}
+.footer-right a:hover {
+    color:#9e9e9a;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 每行四个 */
+    grid-gap: 10px; /* 图片之间的间隔 */
+    max-width: 100%; /* 限制容器宽度 */
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%; /* 图片宽度自适应 */
+    height: auto; /* 保持图片比例 */
+    object-fit: cover; /* 防止图片变形 */
+}
+.gallery img:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大图片 */
+}
+
+.footernav{
+    width: 66.6%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+
+.allpage{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 50, 54);
+    margin-bottom: 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-wrap: wrap; /* 允许子元素换行 */
+    background-color: rgb(108,117,125); /* 背景色 */
+    padding: 20px; /* 内边距 */
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /
+
+}
+.footernav{
+    flex: 1; /* 弹性布局，占据可用空间 */
+    max-width: 500px; /* 最大宽度 */
+    text-align: left; 
+    
+}
+.allpage a{
+    color: #fcf7f7;
+    text-decoration: none;
+}
+.allpage p{
+        word-spacing: 50px; /* 设置单词间距为5像素 */
+    
+    
+    
+}
+.allpage a:hover {
+    color: #9b9b96;
+ }
+ .icon{
+    width: 100px; /* Original width */
+    height: 100px; /* Original height */
+    display: inline-block;
+    transform: scale(0.5); /* Scale down to 50% */
+    transform-origin: center center; /* Ensure scaling is from the center */
+    align-items: center;
+    flex: 1; /* 弹性布局，占据可用空间 */
+    max-width: 500px; /* 最大宽度 */
+    text-align: left; 
+}
+
+
+#scrollToTopBtn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+#scrollToTopBtn:hover {
+    background-color: #d80e0e;
+    width: 50px;
+    height: 50px;
+}
+
+.footer3 {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-around; /* 子元素两端对齐 */
+    align-items: center; /* 垂直居中 */
+    position: relative; /* 保持元素相对定位 */
+    width: 1500px;
+    background-color: rgb(108, 117, 125);
+    color: white;
+}
+
+
+.footer3-1 img {
+    display: block; /* 确保图片被正确显示 */
+    max-width: 150px; /* 限制 logo 最大宽度 */
+    height: auto; /* 保持图片比例 */
+}
+
+.footer3-2 {
+    text-align: right; /* 文本对齐到右侧 */
+}

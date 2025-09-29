@@ -1,0 +1,81 @@
+.bg-image{
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    color: white; /* 根据背景图片调整文本颜色 */
+    z-index: 1; /* 设置较低的 z-index 值 */
+    overflow: hidden;
+    background-size: cover;   /* 背景图自适应容器大小，保持比例 */
+    background-position: center; /* 背景图居中显示 */
+}
+
+
+.breadcrumbs-custom{
+    position: relative;
+    
+
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-custom-title{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+.breadcrumbs-custom-path{
+    color: #aeb1ae;
+    padding-left: 0;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+.breadcrumbs-custom-path li :not(.no-think)::after{
+    content: ">";
+    padding-left: 10px ;
+
+}
+
+.content {
+    margin-left: 250px ;
+    max-width: 760px;
+}
+ 
+
+.content h2{
+    margin-top: 50px;
+    color: black;
+    margin-bottom: 20px;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    
+}
+
+.content {
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 300;
+    color: #74757f;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.link{
+    color: rgb(197, 161, 91);
+    margin-left: 250px;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 300;
+}

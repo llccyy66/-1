@@ -1,0 +1,155 @@
+.bg-image{
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    color: white; /* 根据背景图片调整文本颜色 */
+    z-index: 1; /* 设置较低的 z-index 值 */
+    overflow: hidden;
+    background-size: cover;   /* 背景图自适应容器大小，保持比例 */
+    background-position: center; /* 背景图居中显示 */
+}
+
+
+.breadcrumbs-custom{
+    position: relative;
+    
+
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-custom-title{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */....,,,,，，．．，，．．．．．
+}
+
+.breadcrumbs-custom-path{
+    color: #aeb1ae;
+    padding-left: 0;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+.breadcrumbs-custom-path li :not(.no-think)::after{
+    content: ">";
+    padding-left: 10px ;
+}
+
+
+
+.all{
+    position: relative;
+    display: flex;
+    justify-content: center; /* 水平居中对齐子元素 */
+    align-items: flex-start; /* 垂直方向上对齐子元素顶部 */
+    width: 1260px;
+    padding: 50px;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+    gap: 5%;
+}
+
+.all-left,
+.all-right {
+    flex: 1;  /* 让左右盒子平分空间 */
+}
+.all-left{
+    
+    display: grid;
+    background-color: ;
+    grid-template-columns: repeat(2, 1fr); /* 设置两列，每列占据同样的宽度 */
+    grid-template-rows: repeat(2, auto); /* 设置两行，行高根据内容自动调整 */
+    gap: 5%; /* 设置网格间隙 */
+    width: 1260px;
+    place-items: center;  /* 同时水平和垂直居中 */
+    
+}
+
+.search {
+    display: flex;
+    height: 50px;
+    margin-top:20px;
+    background-color: #fff
+    
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    
+    border-radius: 5px 0 0 5px;
+}   
+.search button {
+    padding: 10px 25px;
+    background-color: #ffffff;
+    color: #fff;
+    border-left:1px  solid #ccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.search svg{
+    width: 3%;
+    position: absolute;
+    top: 6.5%;
+    right: 8.4%;
+
+}
+.search button:hover{
+    background-color: #c5a15b;
+}
+
+.all-right{
+    background-color:#F5F6FA;
+    padding: 50px;
+    
+}
+
+
+.archive ul{
+    color: #c5a15b;
+    margin-top: 2%;
+}
+
+.categoroes ul{
+    color: #c5a15b;
+    margin-top: 2%;
+}
+
+.tags{
+    color: #c5a15b;
+}
+
+.num-button{
+    position: absolute;
+    top: 1780px;
+    left: 50%;
+    transform: translate(-385%);
+    z-index:10;
+}
+
+.num-button button{
+
+    background-color: #c5a15b;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.num-button button:hover{
+    background-color: #aeb1ae;
+}

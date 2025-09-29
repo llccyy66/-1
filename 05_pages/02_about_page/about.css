@@ -1,0 +1,531 @@
+
+.aboutcontainerOne{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+     /* 使容器高度占满视口高度 */
+ 
+.about-left{
+    margin-left: 200px;
+    flex: 1; /* 弹性布局，占据可用空间 */
+    max-width: 600px; /* 最大宽度 */
+    text-align: left; 
+    margin-left: 100px;
+    transform: scale(0.8); /* 缩小到原来的80% */
+    transform-origin: center center; /* 变换原点为元素的中心 */
+}
+.about-left h1{
+font-family: "Playfair Display", "Times New Roman", Times, serif;;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 50px;
+   
+}
+
+.about-left p{
+   color: rgb(157, 160, 163);
+    font-size: 20px;
+    font-weight: 5px;
+}
+.button-group {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: left; /* 水平居中 */
+    gap: 10px; /* 控制按钮和文字之间的间距 */
+    text-align: center;
+    padding: 20px;
+}
+.j
+.use-messenger{
+    height: 90%;
+}
+.button-group button {
+  
+    display: inline-block;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c5a15b;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+.button-group .send-message {
+    background-color:#c5a15b;
+}
+
+.button-group .use-messenger:hover {
+    background-color: #c5a15b;
+  
+}
+.button-group svg{
+    width: 20px;
+    height: 50px;
+}
+.button-group button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.about-right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3%;
+}
+.about-right img{
+    border-radius: 0px;
+}
+}
+.aboutcontainerTwo{
+    background-color: #2b2b2b;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;
+    padding-bottom: 20px;
+    
+}
+
+.date-left-one{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3%;
+    flex: 1;
+    margin-left: 200px;
+    flex: 1; /* 弹性布局，占据可用空间 */
+    max-width: 700px; /* 最大宽度 */
+    text-align: left; 
+    margin-left: 0px;
+}
+.date-left-one img{
+    width: 390px;
+    height: 240px;
+    border-radius: 0px;
+    margin-left: 100px;
+}
+
+.date-right-one{
+    margin-left: 300px;
+    flex: 1;
+    margin-left: 200px;
+    flex: 1; /* 弹性布局，占据可用空间 */
+    max-width: 700px; /* 最大宽度 */
+    text-align: left; 
+    margin-left: 0px;
+  
+}
+.date-right-one h1{
+    color: #FFFFFF66;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-size: 50px;
+}
+.date-right-one h3{
+    color: rgb(248, 241, 241);
+    font-size: 20px;
+    
+}
+.date-right-one p{
+    color: #AEB1BE;
+}
+/* TEACHER STAR */
+.teacher {
+
+    text-align: center; /* 标题居中 */
+    padding: 20px; /* 内边距 */
+    background-color: #ffffff; /* 背景色可选 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 垂直居中 */
+}
+
+.teacher h1 {
+    font-size: 36px; /* 标题大小 */
+    color: rgb(43, 43, 43); /* 标题颜色 */
+    margin-bottom: 40px; /* 标题与下方内容的间距 */
+    margin-top: 20px;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    display: block;
+    
+}
+
+.teacher-list {
+    display: flex; /* 使用 Flex 布局 */
+    justify-content: space-between; /* 均匀分布 */
+    align-items: flex-start; /* 顶部对齐 */
+    flex-wrap: wrap; /* 超出宽度自动换行 */
+    gap: 20px; /* 每个模块之间的间距 */
+    max-width: 1000px;
+}
+
+.teacher-item {
+    width: calc(25% - 20px); /* 每个模块宽度，考虑间距 */
+    background-color: #ffffff; /* 背景色 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    border-radius: 10px; /* 圆角 */
+    padding: 15px; /* 内边距 */
+    text-align: center; /* 文本居中 */
+    transition: transform 0.3s ease; /* 平滑过渡效果 */
+
+}
+
+
+.teacher-item h2 {
+    font-size: 18px; /* 名称字体大小 */
+    color: #c5a15b; /* 名称颜色 */
+    margin-bottom: 5px; /* 名称与职务的间距 */
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.teacher-item p {
+    font-size: 16px; /* 职务字体大小 */
+    color: #aeb1be; /* 职务颜色 */
+}
+
+/* Teacher section styles */
+.teacher {
+    text-align: center;
+    margin: 50px 0;
+
+}
+
+
+
+.teacher-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.teacher-photo img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.teacher-photo:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute; /* 绝对定位 */
+    bottom: 0; /* 底部对齐 */
+    left: 0; /* 左侧对齐 */
+    width: 100%; /* 覆盖层宽度与图片一致 */
+    height: 100%;
+    background: rgba(13, 14, 21, 0.5); /* 半透明背景 */
+    display: flex; /* 使用弹性盒模型布局 */
+    justify-content: flex-start; /* 水平靠左对齐 */
+    align-items: flex-end; /* 垂直靠底对齐 */
+    opacity: 0; /* 初始状态不可见 */
+    transition: opacity 0.3s ease; /* 过渡效果 */
+    color: white; /* 文字颜色 */
+    font-size: 1.3em; /* 字体大小 */
+    padding: 10px; /* 内边距 */
+   
+}
+
+.teacher-photo:hover .overlay {
+    opacity: 1;
+}
+
+
+
+
+
+h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+p {
+    color: gray;
+    font-size: 14px;
+}
+.lasttopic{
+    background-color: #dedee1;
+    text-align: center; 
+    font-size: 30px;
+    margin-bottom: 0; /* 确保底部边距为0 */
+    padding: 0; /* 确保填充为0 */
+    font-family:"Playfair Display", "Times New Roman", Times, serif ;
+}
+
+.event{
+    background-color: #dedee1;
+    margin-top: 0; /* 确保顶部边距为0 */
+    padding: 0; /* 确保填充为0 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+     /* 使容器高度占满视口高度 */
+ 
+
+}
+
+.event-picture {
+    background-image: url(../../01_assets/images/blog-layouts-5-637x456.jpg); /* 替换为您的图片路径 */
+    background-size: cover; /* 覆盖整个容器 */
+    background-position: center; /* 居中显示 */
+    height: 500px; /* 设置容器高度 */
+    position: relative; /* 为子元素提供定位上下文 */
+    color: rgb(240, 236, 236); /* 文字颜色 */
+    font-size: 20px; /* 文字大小 */
+    text-align: center; /* 文字居中 */
+    line-height: 700px; /* 垂直居中文字 */
+    width: 600px;
+    height: 400px;
+   
+}
+
+
+
+.event-left-one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+     /* 使容器高度占满视口高度 */
+     width: 335px;
+     margin-left: 300px;
+     margin-top: 0px;
+}
+
+.event-left-two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width:470px;
+     /* 使容器高度占满视口高度 */
+     margin-left: 230px;
+     margin-top: 40px;
+}
+
+.event-left-three{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+     /* 使容器高度占满视口高度 */
+     margin-left: 300px;
+     margin-top: 40px;
+}
+.event-left-one-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    background-color: #AEB1BE; /* 灰色背景 */
+    color: rgb(245, 245, 245); /* 白色文字 */
+    font-family: Arial, sans-serif; /* 无衬线字体 */
+    padding: 30px;
+    
+}
+
+.event-left-one-number p{
+    font-family:"Playfair Display", "Times New Roman", Times, serif ;
+    font-size:25px;
+    color: rgb(255, 255, 254);
+}
+.event-left-one-test p{
+    font-family:"Playfair Display", "Times New Roman", Times, serif ;
+    font-size:20px;
+}
+.event-left-one-test h4{
+    color: #151515;
+}
+
+
+.event-left-one-number:hover {
+    background-color: #c5a15b; /* 你想要的背景颜色 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+}
+.event-left-one-number .event-left-one-test{
+    transform-origin: center center; /* 变换原点为元素的中心 */
+    flex: 1; /* 弹性布局，占据可用空间 */
+}
+.event-left-one-test {
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+}
+
+.event-left-one-test h4 {
+    transition: color 0.3s ease; /* 平滑过渡效果 */
+}
+
+.event-left-one-test h4:hover {
+    color: #c5a15b; /* 鼠标悬停时变为黄色 */
+    
+}
+
+.button-group .send-message {
+    background-color: #c5a15b; /* 设置背景颜色为黄色 */
+    color: white; /* 设置字体颜色为白色 */
+    border: none; /* 移除边框 */
+    padding: 10px 20px; /* 设置内边距 */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+    border-radius: 20px; 
+
+}
+
+.button-group .send-message:hover {
+    background-color: #816d1c; /* 鼠标悬停时改变背景颜色 */
+    animation: blink 1s step-end infinite;
+    
+}
+@keyframes blink {
+    50% {
+        opacity: 0; /* 半透明 */
+    }
+}
+.bg-image{
+    position: relative;
+    
+    width: 100%;
+    height: 450px;
+    color: white; /* 根据背景图片调整文本颜色 */
+    z-index: 1; /* 设置较低的 z-index 值 */
+    overflow: hidden;
+    background-size: cover;   /* 背景图自适应容器大小，保持比例 */
+    background-position: center; /* 背景图居中显示 */
+}
+
+
+.breadcrumbs-custom{
+    position: relative;
+    
+
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-custom-title{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+
+.breadcrumbs-custom-path{
+    color: #aeb1ae;
+    padding-left: 0;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+}
+.breadcrumbs-custom-path li :not(.no-think)::after{
+    content: ">";
+    padding-left: 20px ;
+
+
+
+/* TEACHER END*/
+}
+
+/* 清除所有元素的默认边距和内边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置基本字体样式 */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* 清除链接的下划线 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 去除列表符号 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 去除表格的间距 */
+table {
+    border-collapse: collapse;
+}
+
+/* 表单元素重置 */
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+.button-primary-outline {
+    background-color: transparent;
+    border: 2px solid #0f0a00;
+    color: #090600;
+}
+
+.button:hover {
+    background-color: #c5a15b;
+}
+
+.button-primary-outline:hover {
+    background-color: #c5a15b;
+    color: #000000;
+}
+
+.button-outer{
+    margin-top: 20px;
+}
+
+/* 设置图片的默认行为 */

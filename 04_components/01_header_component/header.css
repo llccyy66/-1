@@ -1,0 +1,230 @@
+
+/* Header样式 */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #808380;
+}
+
+/* Logo样式 */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* 电话和位置图标部分样式 */
+.phone_num, .location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 调整图标大小 */
+.phone_num svg,
+.location svg {
+    width: 24px; /* 图标宽度 */
+    height: 24px; /* 图标高度 */
+}
+
+/* 电话号码和位置文字样式 */
+.phone_num ul, .location p {
+    margin: 0;
+    font-size: 14px;
+    color: #737373;
+}
+
+/* 电话号码和地址默认样式 */
+.phone_num a,
+.location a {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 移除下划线 */
+    transition: color 0.3s, text-decoration 0.3s; /* 添加颜色过渡动画 */
+}
+
+/* 鼠标悬浮时变色 */
+.phone_num a:hover,
+.location a:hover {
+    color: #C1A25D; /* 设置悬浮时的颜色 */
+    text-decoration: none; /* 添加下划线 */
+}
+
+
+/* Button样式 */
+.book_lesson button {
+    background-color: #000000;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.book_lesson button:hover {
+    background-color: #C1A25D;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around; /* 两端对齐 */
+    align-items: center; /* 垂直居中 */
+    padding: 0px 20px; /* 水平方向内边距 */
+    background-color: #2B2B2B; /* 背景颜色 */
+    color: #ffffff; /* 字体颜色 */
+    height: 60px; /* 设置导航栏高度 */
+    width: 100%; /* 占满宽度 */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    position: relative;
+}
+
+
+.nav ul {
+    display: flex; /* 使用Flex布局 */
+    justify-content: center; /* 水平居中对齐 */
+    gap: 20px; /* 子元素间距 */
+    align-items: center; /* 垂直居中 */
+    list-style: none; /* 移除列表默认样式 */
+    margin: 0 auto; /* 让ul本身居中 */
+    padding: 0;
+    
+}
+
+.nav ul li a {
+    color: white; /* 链接字体颜色 */
+    text-decoration: none; /* 移除下划线 */
+    font-size: 14px; /* 字体大小 */
+    padding: 5px 10px; /* 链接内边距 */
+    border-radius: 3px; /* 圆角 */
+    transition: background-color 0.3s; /* 添加悬停动画 */
+}
+
+.nav ul li a:hover {
+    background-color: #C1A25D; /* 悬停时背景色 */
+}
+/* 默认向下箭头 */
+.arrow {
+    display: inline-block;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out; /* 添加旋转动画 */
+    transform: rotate(90deg); /* 默认朝下 */
+    margin-left: 5px; /* 添加空隙 */
+}
+
+/* 鼠标悬停时箭头向上 */
+li:hover .arrow {
+    transform: rotate(270deg); /* 旋转180度，变为向上箭头 */
+}
+
+/* 下拉菜单初始隐藏 */
+#blog-menu,
+#pages-menu {
+    position: absolute;
+    top: 100%; /* 确保菜单在父元素下方 */
+    visibility: hidden; /* 隐藏菜单 */
+    opacity:0; /* 设置透明度为 0 */
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+    margin-top: -20px;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr; /* 默认单列布局 */
+    gap: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9);
+    transition: opacity 0.2s ease, visibility 0.2s ease; /* 平滑显示效果 */
+}
+
+/* 鼠标悬停显示菜单 */
+#blog:hover #blog-menu,
+#pages:hover #pages-menu {
+    visibility: visible; /* 显示菜单 */
+    opacity: 1; /* 设置透明度为 1 */
+}
+
+/* 鼠标移至菜单内时保持显示 */
+#blog-menu:hover,
+#pages-menu:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* PAGES 菜单调整为两列布局 */
+#pages-menu {
+    grid-template-columns: 1fr 1fr; /* 两列布局 */
+    width: 400px; /* 宽度适配内容 */
+}
+
+/* 下拉菜单项样式 */
+#blog-menu li,
+#pages-menu li {
+    padding: 5px 10px;
+    color: white;
+    font-size: 16px;
+    position: relative; /* 必须设置为relative，以便子元素定位 */
+
+}
+
+#blog-menu li:hover,
+#pages-menu li:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+/* 向右箭头动画 */
+@keyframes slide-right {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#blog-menu li a,
+#pages-menu li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+#blog-menu li:hover::before,
+#pages-menu li:hover::before {
+    content: ">";
+    position: absolute;
+    left: -10px;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* 搜索图标容器 */
+#zoom {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    width: 46px; /* 设置固定宽度 */
+    height: 46px; /* 设置固定高度 */
+    background-color: #444; /* 背景色 */
+    border-radius: 50%; /* 圆形外观 */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    transition: background-color 0.3s; /* 悬停动画 */
+    position: absolute;
+    margin-left: 800px;
+}
+
+/* 搜索图标样式 */
+#zoom svg {
+    width: 24px; /* 设置图标宽度 */
+    height: 24px; /* 设置图标高度 */
+    fill: #fff; /* 图标颜色 */
+}
+
+/* 悬停效果 */
+#zoom:hover {
+    background-color: #C1A25D; /* 鼠标悬停时更改背景色 */
+}

@@ -1,0 +1,53 @@
+/* 设置所有元素的盒模型为 border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 清除所有元素的默认边距和内边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置基本字体样式 */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* 清除链接的下划线 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 去除列表符号 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 去除表格的间距 */
+table {
+    border-collapse: collapse;
+}
+
+/* 表单元素重置 */
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* 设置图片的默认行为 */
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}

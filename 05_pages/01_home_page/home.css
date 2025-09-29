@@ -1,0 +1,853 @@
+
+.carousel {
+    position: relative;
+    width: 100%;
+  
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0; /* 防止图片缩小 */
+}
+
+/* 调整圆圈和按钮左对齐 */
+.dots {
+    position: absolute;
+    bottom: 40px;
+    left: 10%; /* 圆圈左对齐 */
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block; /* 确保圆圈显示 */
+    position: relative;
+    z-index: 10; /* 确保在图片上可见 */
+}
+
+
+.start-btn {
+    position: absolute;
+    bottom: 90px;
+    left: 10%; /* 按钮左对齐 */
+    background-color: #c1A25D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0; /* 初始时不可见 */
+    animation: slide-in 1s ease forwards;
+    width: 200px; /* 按钮宽度 */;
+    height: 54px; /* 按钮高度 */;
+}
+/* 动画：从上到下浮入 */
+@keyframes slide-in {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 艺术字样式 */
+.caption {
+    position: absolute;
+    top: 20%;
+    left: 10%; /* 设置与按钮和圆圈左对齐 */
+    transform: translateX(0);
+    font-family: "Georgia", serif;
+    font-size: 88px;
+    color: white;
+    opacity: 0;
+    animation: slide-in 1s forwards; /* 添加动画 */
+    line-height: 1;;
+}
+
+/* 降低透明度样式 */
+.caption .low-opacity {
+    opacity: 0.5; /* 降低透明度 */
+    font-weight: normal; /* 可以选择取消加粗 */
+}
+
+/* 动画：从上到下浮入 */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px); /* 初始位置上移 */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* 最终位置 */
+    }
+}
+
+/* TEACHER STAR */
+.teacher {
+
+    text-align: center; /* 标题居中 */
+    padding: 20px; /* 内边距 */
+    background-color: #f9f9f9; /* 背景色可选 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 垂直居中 */
+}
+
+.teacher h1 {
+    font-size: 36px; /* 标题大小 */
+    color: rgb(43, 43, 43); /* 标题颜色 */
+    margin-bottom: 40px; /* 标题与下方内容的间距 */
+    margin-top: 20px;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    display: block;
+    
+}
+
+.teacher-list {
+    display: flex; /* 使用 Flex 布局 */
+    justify-content: space-between; /* 均匀分布 */
+    align-items: flex-start; /* 顶部对齐 */
+    flex-wrap: wrap; /* 超出宽度自动换行 */
+    gap: 20px; /* 每个模块之间的间距 */
+}
+
+.teacher-item {
+    width: calc(25% - 20px); /* 每个模块宽度，考虑间距 */
+    background-color: #ffffff; /* 背景色 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    border-radius: 10px; /* 圆角 */
+    padding: 15px; /* 内边距 */
+    text-align: center; /* 内容居中 */
+   
+}
+
+
+.teacher-item h2 {
+    font-size: 18px; /* 名称字体大小 */
+    color: #c5a15b; /* 名称颜色 */
+    margin-bottom: 5px; /* 名称与职务的间距 */
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.teacher-item p {
+    font-size: 16px; /* 职务字体大小 */
+    color: #aeb1be; /* 职务颜色 */
+}
+
+/* Teacher section styles */
+.teacher {
+    text-align: center;
+    margin: 50px 0;
+
+}
+
+
+
+.teacher-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.teacher-photo img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.teacher-photo:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 半透明灰色遮罩 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.teacher-photo:hover .overlay {
+    opacity: 1;
+}
+
+.social-icons {
+
+    width: 100%;
+    display: flex;
+    justify-content:space-around; /* 水平居中 */
+    align-items:center; /* 垂直居中 */
+    gap: 1%; /* 图标之间的间距 */
+    
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    width: 20%;
+    
+}
+.social-icons svg{
+    width: 100%;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* 放大效果 */
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+p {
+    color: gray;
+    font-size: 14px;
+}
+
+
+/* TEACHER END*/
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%); /* 动画开始时，元素位于屏幕外 */
+    }
+    100% {
+        transform: translateX(0); /* 动画结束时，元素滑入屏幕 */
+    }
+}
+
+/* 刘储铭 START*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.bg-gray-100 {
+    background-color: #F5F6FA;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h3{
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: 700;
+}
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.col-sm-6,
+.col-lg-4 {
+    flex: 0 0 33.3333%; /* 每个盒子占三分之一宽度 */
+    max-width: 33.3333%;
+    padding: 15px;
+}
+
+.box-creative {
+    background-color: #F5F6FA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box-creative:hover {
+    transform: translateY(-10px);
+}
+
+.box-creative-icon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.box-creative-title a {
+    color: #333;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+/* LCM start */
+.box-creative p {
+
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 动画效果 */
+.wow {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+}
+
+.wow.slideInDown {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 修改标题字体大小 */
+h3 {
+    font-size: 36px; /* 调整为您想要的大小 */
+    margin-bottom: 30px; /* 可选：增加一些底部间距 */
+}
+/* <--LCM end--> */
+
+
+/* <--LCM learning start--> */
+/* 基本样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.bg-secondary {
+    background-color: #f8f9fa;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box-cta-thin {
+    padding: 30px;
+    width: 100%;
+    background-color: #6c757d; /* 设置背景颜色为灰色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-cta-thin .d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.box-cta-thin h4 {
+        font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    margin: 0;
+    margin-right: 20px; /* 调整文字和按钮之间的间距 */
+}
+
+.box-cta-thin .button-outer {
+    margin-top: 0; /* 移除顶部间距 */
+}
+
+.col-sm-10{
+    width: 100%;
+}
+.post-modern {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1; /* 确保内容在背景之上 */
+    margin: 20px;
+}
+
+.post-modern:hover {
+    transform: translateY(-10px);
+}
+
+.post-modern-media{
+    display: flex;
+    justify-content: center;
+}
+
+.post-modern-media img {
+    width: 95%;
+    height: auto;
+    display: block; /* 确保图片在块级元素中正确显示 */
+}
+
+.post-modern-title a {
+    color: #c5a15b;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.post-modern-meta {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.post-modern-meta li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.post-modern-meta li :not(.no-before)::before{
+    content: "|";
+    color: #e8e9ee;
+    margin-right: 10px;
+}
+
+.post-modern-meta time {
+    color: #333;
+}
+
+.post-modern p {
+    color: #74757f;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c5a15b;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-primary-outline {
+    background-color: transparent;
+    border: 2px solid #0f0a00;
+    color: #090600;
+}
+
+.button:hover {
+    background-color: #c5a15b;
+}
+
+.button-primary-outline:hover {
+    background-color: #c5a15b;
+    color: #000000;
+}
+
+.button-outer{
+    margin-top: 20px;
+}
+
+
+/* Flexbox布局 */
+.row.row-50 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 间距 */
+    flex-direction: row;
+}
+
+/* 增大 "Upcoming Events" 字体 */
+.section.section-lg h3 {
+    font-size: 32px; /* 调整字体大小 */
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-weight: bold; /* 可选：加粗字体 */
+    margin-bottom: 30px; /* 调整与下方内容的间距 */
+}
+
+@media (max-width: 768px) {
+    .row.row-50 {
+        flex-direction: column; /* 响应式布局，小屏幕时垂直堆叠 */
+        align-items: center;
+    }
+}
+
+
+
+.section {
+    padding: 60px 0;
+}
+
+.outer-container {
+    position: relative;
+    padding: 60px 0;
+    color: white; /* 根据背景图片调整文本颜色 */
+    z-index: 1; /* 设置较低的 z-index 值 */
+}
+
+.inner-container {
+    position: relative;
+    z-index: 10; /* 设置较高的 z-index 值 */
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* 背景设置为透明 */
+    padding: 30px;
+    box-sizing: border-box; /* 确保内边距不会增加盒子的总尺寸 */
+    border-radius: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    font-size: 32px; /* 增大标题字体大小 */
+}
+
+p {
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: inline-block;
+    max-width: 730px;
+}
+
+/* 计数器最小化样式 */
+.counter-minimal {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10; /* 确保计数器元素也在较高层次 */
+}
+
+.counter-minimal-image {
+    margin-bottom: 10px;
+}
+
+.counter-minimal-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* 可选，根据需要调整 */
+}
+
+.counter-minimal-icon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.counter-minimal-main {
+    margin-bottom: 10px;
+}
+
+.counter {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.counter-minimal-title {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+<--LCM school end-->
+
+/* 刘储铭 END*/
+ /* lihongyu begin */
+ 
+ header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    padding: 10px;
+    background-color: 囗#808380;
+    color:#ffffff;
+   }
+   /* 全局样式 */
+  
+  
+    
+    .top-li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 20%;
+      margin-right: 20%;
+      gap: 5%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      
+    }
+    
+    .top-left img {
+      width: 500px;
+      height: auto;
+      position: relative;;
+      left: 40px;
+      
+    }
+    
+    .top-right {
+      width: 50%;
+    }
+    
+    .top-title  {
+      width: 500px;
+      height: 90%;
+      position: relative;
+      left: 40px;
+      font-family: "Playfair Display", "Times New Roman", Times, serif;
+      font-size: 1.5em;
+    }
+    
+    .top-text  {
+      width: 500px;
+      height: 90%;
+      position: relative;;
+      left: 40px;
+      font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #74757f;
+    }
+    .button {
+      display: inline-block;
+      font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: bold;
+      padding: 10px 20px;
+      text-decoration: none;
+      position: relative;
+      left: -00px;
+      color: #ffffff;
+      background-color: #c5a15b;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button-primary-outline {
+      background-color: transparent;
+      border: 2px solid #0f0a00;
+      color: #090600;
+  }
+  
+  .button:hover {
+      background-color: #c5a15b;
+  }
+  
+  .button-primary-outline:hover {
+      background-color: #c5a15b;
+      color: #000000;
+  }
+  
+  .button-outer{
+      margin-top: 200px;
+  }
+  .middle-li {
+    text-align: center;
+    padding: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  
+  }
+  
+  .middle-title {
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    margin-bottom: 20px;  
+    font-size: 2em;
+  
+  }
+  
+  .middle-text {
+    font-size: 15px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #74757f;
+  }
+  
+  .groups {
+    display: flex;
+    justify-content:center;
+  
+    margin-bottom: 20px;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .group {
+  padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    gap: 10px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+  }
+  .group p:hover{
+    color: #b58e40;
+    transition: color 0.05s ease-in-out;
+    
+  }
+  .group img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .group img:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+    transition: transform 0.2s ease-in-out; /* 平滑过渡效果 */
+  }
+  .bottom-li {
+    position: relative;
+    height: 40vh;
+    background: url(../../01_assets/images/parallax-cta.jpg) center center / cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center=
+    margin-bottom: 5%;
+  }
+  
+  .bottom-li-titie {
+    max-width: 600px;
+    font-size: 1.5em;
+   
+  }
+  .bottom-li-title-q1 {
+    font-size: 2em;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    margin-top: 60px;
+    translate: TranslateX(-50%);
+    color: white;
+  
+  }
+  
+  .bottom-li-title-q2 {
+font-size: 2em;
+  margin-bottom: 10px;
+  margin-top: -50px;
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  color: white;
+  }
+  
+  .bottom-li-text {
+    max-width: 600px;
+    text-align: center;
+   
+  }
+  
+  
+  
+  
+  .bottom-lii {
+    padding: 60px 0;
+   
+    text-align: center;
+  }
+  
+  .bottom-lii-title {
+    margin-bottom: 40px;
+  }
+  
+  .testimonials {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .bottom-lii-title {
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+  }
+  .women {
+    text-align: left;
+    width: 30%;
+    padding: 20px;
+  }
+  
+  .women img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    float: left;
+  }
+  
+  .women p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .women p:first-of-type {
+    color: rgb(179, 178, 178);
+    font-size: large;
+    margin-bottom: 30px;
+  }
+  
+  .women p:nth-of-type(2) {
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .women p:last-of-type {
+    margin-top: 10px;
+  }
+  
+  .testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .testimonial-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .testimonial-dots .dot.active {
+    background-color: rgb(209, 150, 77);
+  }  
+  /* lihongyu end */
+
+
+  
